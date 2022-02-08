@@ -8,25 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    //MARK: Stored Properties
+    let multiplican = Int.random(in: 1...12)
+    let multiplier = Int.random(in: 1...12)
+    
+    //Holds the users input
+    @State var inputGiven = ""
+    
+    //MARK: Computed Properties
+    
+    
+    
     var body: some View {
+        
         ScrollView{
             VStack(spacing: 0) {
                 HStack{
                     Text("X")
                         .padding(.horizontal)
                     Spacer()
-                    VStack{
-                        Text("5")
-                        Text("6")
-                            .padding()
+                    VStack(alignment: .trailing){
+                        Text("\(multiplican)")
+                        Text("\(multiplier)")
+
                     }
+                    .padding()
                 }
                 Divider()
                 HStack{
                     Image(systemName: "checkmark.circle")
                         .foregroundColor(.green)
                     Spacer()
-                    Text("30")
+                    TextField("Enter a product",
+                              text: $inputGiven)
                         .padding()
                 }
             }
