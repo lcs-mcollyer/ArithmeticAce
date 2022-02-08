@@ -11,17 +11,22 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack{
-                Spacer(minLength: 100)
-            VStack{
-            Text("5")
-            Text("6")
+                Text("X")
+                Spacer()
+                VStack{
+                    Text("5")
+                    Text("6")
+                        .padding()
+                }
+            }
             Divider()
-            Text("30")
+            HStack{
+                Spacer()
+                Text("30")
+                    .padding()
             }
-            
-            }
-            
         }
+        .font(.system(size: 72))
     }
 }
 
