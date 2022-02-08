@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ScrollView{
-            VStack {
+            VStack(spacing: 0) {
                 HStack{
                     Text("X")
                         .padding(.horizontal)
@@ -24,6 +24,7 @@ struct ContentView: View {
                 Divider()
                 HStack{
                     Image(systemName: "checkmark.circle")
+                        .foregroundColor(.green)
                     Spacer()
                     Text("30")
                         .padding()
