@@ -9,24 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            HStack{
-                Text("X")
-                Spacer()
-                VStack{
-                    Text("5")
-                    Text("6")
+        ScrollView{
+            VStack {
+                HStack{
+                    Text("X")
+                        .padding(.horizontal)
+                    Spacer()
+                    VStack{
+                        Text("5")
+                        Text("6")
+                            .padding()
+                    }
+                }
+                Divider()
+                HStack{
+                    Image(systemName: "checkmark.circle")
+                    Spacer()
+                    Text("30")
                         .padding()
                 }
             }
-            Divider()
-            HStack{
-                Spacer()
-                Text("30")
-                    .padding()
-            }
+            .font(.system(size: 72))
         }
-        .font(.system(size: 72))
     }
 }
 
